@@ -1,1 +1,1 @@
-bitstring>=3.1.6
+-e git+git@github.com:satyaog/pybzparse.git@b40169ea753c6f1156101c9cc7f1443fad3ae68d#egg=pybzparse
