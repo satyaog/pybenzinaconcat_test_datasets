@@ -39,8 +39,8 @@ def tune_video(filename, im_width, im_height):
     # moov.trak.mdia.minf.stbl
     stbl = moov.boxes[-1].boxes[-1].boxes[-1].boxes[-1]
 
-    # moov.trak.mdia.minf.stbl.stsd.avc1
-    avc1 = stbl.boxes[0].boxes[0]
+    # moov.trak.mdia.minf.stbl.stsd.hvc1
+    hvc1 = stbl.boxes[0].boxes[0]
 
     clap = bx_def.CLAP(BoxHeader())
     clap.header.type = b"clap"
@@ -54,9 +54,9 @@ def tune_video(filename, im_width, im_height):
     clap.vert_off_d = 2
 
     # insert clap before pasp
-    pasp = avc1.pop()
-    avc1.append(clap)
-    avc1.append(pasp)
+    pasp = hvc1.pop()
+    hvc1.append(clap)
+    hvc1.append(pasp)
 
     stco = stbl.boxes[-1]
     stco.entries[0].chunk_offset = ftyp.header.box_size + mdat.header.header_size
