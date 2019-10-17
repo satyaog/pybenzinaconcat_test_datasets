@@ -1,1 +1,1 @@
--e git+git@github.com:satyaog/pybzparse.git@6006cd62549552f2f66a074904110775874509bc#egg=pybzparse
+git+https://github.com/satyaog/pybzparse.git@6006cd62549552f2f66a074904110775874509bc
