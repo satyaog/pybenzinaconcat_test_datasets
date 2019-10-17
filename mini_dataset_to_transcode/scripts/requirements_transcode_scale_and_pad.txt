@@ -1,2 +1,2 @@
--e git+git@github.com:satyaog/pybzparse.git@6006cd62549552f2f66a074904110775874509bc#egg=pybzparse
--e git+git@github.com:satyaog/pyheifconcat.git@ba4b1bfc0e408785fc072f3541e268a106b6c750#egg=pyheifconcat
+git+https://github.com/satyaog/pybzparse.git@6006cd62549552f2f66a074904110775874509bc
+git+https://github.com/satyaog/pyheifconcat.git@a69bb3eecd1c358f67f53f37b07d01981a35951c

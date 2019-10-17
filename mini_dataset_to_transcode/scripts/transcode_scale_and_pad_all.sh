@@ -15,7 +15,7 @@ function scale_and_pad {
     printf '\x02\x00\x00\x00\x00\x00\x00\x00' > tmp/$1/$2.JPEG.target
   fi
 
-  python scripts/transcode_scale_and_pad.py \
+  python -m pyheifconcat.image2mp4 \
          --codec=h265 --tile=512:512:yuv420 --crf=10 \
          --output=$2.mp4 \
          --primary --thumb --name=$2.JPEG \
