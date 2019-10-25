@@ -1,0 +1,6 @@
+[submodule "imagenet"]
+	path = imagenet
+	url = /network/datasets/imagenet/
+[submodule "dev_im_net/imagenet"]
+	path = dev_im_net/imagenet
+	url = /network/datasets/imagenet/
