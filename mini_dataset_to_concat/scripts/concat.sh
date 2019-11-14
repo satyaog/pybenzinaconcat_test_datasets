@@ -13,4 +13,3 @@ python -m pyheifconcat concat . concat.bzna
 
 # Track deleted files
 git add queue/
-
