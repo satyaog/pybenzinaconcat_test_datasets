@@ -29,3 +29,9 @@ scale_and_pad 0001 n02100735_8211
 scale_and_pad 0002 n02110185_679
 scale_and_pad 0002 n02110185_2014
 scale_and_pad 0002 n02110185_7939
+
+python -m pyheifconcat.image2mp4 \
+       --codec=h265 --tile=512:512:yuv420 --crf=10 \
+       --output=n02100735_8211_fake_no_target.mp4 \
+       --primary --thumb --name=n02100735_8211_fake_no_target.JPEG \
+       --item=path=no_target/n02100735_8211_fake_no_target.JPEG
