@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this script is meant to be used with 'datalad run --explicit'
+# this script is meant to be used with 'datalad run'
 
 pip install -r scripts/requirements_index_metadata.txt --upgrade
 ERR_CODE=$?
@@ -9,6 +9,7 @@ if [ $ERR_CODE -ne 0 ]; then
    exit $ERR_CODE
 fi
 
-[ -f concat_indexed.bzna ] || cp concat.bzna concat_indexed.bzna
+cp -f concat.bzna concat_indexed.bzna
+chmod +w concat_indexed.bzna
 
 python -m pyheifconcat.index_metadata concat_indexed.bzna
